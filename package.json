@@ -1,0 +1,22 @@
+{
+  "name": "https-dev-proxy",
+  "version": "0.0.0",
+  "description": "An HTTP proxy server for development that adds HTTPS support to plain HTTP services",
+  "main": "main.js",
+  "scripts": {
+    "test": "tape tests/**/*.js"
+  },
+  "author": "Richard North <rich.north@gmail.com> (http://rnorth.org)",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "http-proxy": "^1.11.2",
+    "mkdirp": "^0.5.1",
+    "node-forge": "^0.6.34"
+  },
+  "devDependencies": {
+    "express": "^4.13.3",
+    "tape": "^4.2.0",
+    "randomstring": "^1.1.0"
+  }
+}

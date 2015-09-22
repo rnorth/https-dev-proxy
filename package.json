@@ -2,7 +2,6 @@
   "name": "https-dev-proxy",
   "version": "0.0.0",
   "description": "An HTTP proxy server for development that adds HTTPS support to plain HTTP services",
-  "main": "main.js",
   "scripts": {
     "test": "tape tests/**/*.js"
   },
@@ -12,11 +11,16 @@
     "colors": "^1.1.2",
     "http-proxy": "^1.11.2",
     "mkdirp": "^0.5.1",
-    "node-forge": "^0.6.34"
+    "node-forge": "^0.6.34",
+    "yargs": "^3.25.0"
   },
   "devDependencies": {
     "express": "^4.13.3",
     "tape": "^4.2.0",
-    "randomstring": "^1.1.0"
+    "randomstring": "^1.1.0",
+    "tmp": "0.0.27"
+  },
+  "bin": {
+    "https-dev-proxy": "main.js"
   }
 }

@@ -1,7 +1,8 @@
 var test = require('tape'),
     http = require('http'),
     https = require('https'),
-    randomstring = require('randomstring');
+    randomstring = require('randomstring'),
+    tmp = require('tmp');
 
 var proxy = require('../lib/proxy.js');
 
@@ -42,7 +43,8 @@ test('we can use a proxy server to hit any subdomain', function (t) {
 
     // Start the proxy server
     var proxyServer = proxy.createServer({
-        target: 'http://localhost:3000'
+        target: 'http://localhost:3000',
+        workingDir: tmp.dirSync().name
     });
     proxyServer.listen(4000);
 
